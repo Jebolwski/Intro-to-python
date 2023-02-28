@@ -154,7 +154,6 @@ def threedotfifteen(num):
 
 # !3.17
 def threedotseventeen():
-
     for i in range(1, 8):
         print('*' * i)
 
@@ -162,10 +161,48 @@ def threedotseventeen():
         print('*' * i)
 
     for i in range(0, 8, 1):
-        print(' ' * i + '*' * (8-i))
+        print(' ' * i + '*' * (8 - i))
 
     for i in range(0, 8, 1):
-        print(' ' * (8-i) + '*' * i)
+        print(' ' * (8 - i) + '*' * i)
 
 
-threedotseventeen()
+# !3.19
+def threedotnineteen(num):
+    i = 2
+    arr = []
+    while num != 1:
+        if num % i == 0:
+            num /= i
+            if i not in arr:
+                arr.append(i)
+        else:
+            i += 1
+
+    print(arr)
+
+
+# !3.20
+def threedottwenty(inp):
+    inp = inp[::-1]
+    res = 0
+    for i in range(len(inp)):
+        if int(inp[i]) == 1:
+            # print(i,inp[i])
+            res += pow(2, i)
+
+    print(res)
+
+
+# !3.21
+def threedottwentyone(num):
+    left = num // 1
+    decimals = num - num // 1
+    rightone = decimals // 0.1
+    righttwo = ((decimals - 0.1*rightone) * 100)
+    print("Meters :", int(left))
+    print("Decimeters :", int(rightone))
+    print("Centimeters :", int(righttwo))
+
+
+threedottwentyone(133.744)
