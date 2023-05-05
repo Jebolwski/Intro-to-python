@@ -5,6 +5,9 @@ from dataclasses import dataclass, field
 class PriorityQueue:
     _arr: list = field(default_factory=list)
 
+    # def __post_init__(self):
+    #     print("ANK MAESİ")
+
     def insert(self, x):
         self._arr.insert(0, x)
 
@@ -39,9 +42,15 @@ queue.insert(15)
 queue.insert(20)
 
 queue1 = PriorityQueue()
-queue.insert(10)
-queue.insert(15)
+queue1.insert(10)
+queue1.insert(15)
 
+
+print(queue)
+
+print()
+
+print(queue1)
 
 print(queue > queue1)
 print(queue < queue1)
